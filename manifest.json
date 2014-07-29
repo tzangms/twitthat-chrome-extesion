@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "twitthat",
+  "description": "Share webpage to twitter easily.",
+  "version": "1.0",
+
+  "permissions": [
+    "http://twitthat.com/",
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  }
+}
