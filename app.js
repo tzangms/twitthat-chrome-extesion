@@ -3,7 +3,7 @@ chrome.tabs.getSelected(null, function(tab) {
     var title = tab.title;
 
     url = 'http://twitthat.com/go'
-        + '?url=' + url.replace(/%20/g, '+') 
+        + '?url=' + encodeURIComponent(url)
         + '&title=' + encodeURI(title)
         + '&is_extension=1';
 
