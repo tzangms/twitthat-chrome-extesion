@@ -1,6 +1,6 @@
-chrome.tabs.getSelected(null, function(tab) {
-    var url = tab.url;
-    var title = tab.title;
+chrome.tabs.query({ highlighted : true }, function(tab) {
+    var url = tab[0].url;
+    var title = tab[0].title;
 
     url = 'http://twitthat.com/go'
         + '?url=' + encodeURIComponent(url)

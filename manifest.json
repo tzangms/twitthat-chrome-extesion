@@ -3,7 +3,7 @@
 
   "name": "twitthat",
   "description": "Share webpage to twitter easily.",
-  "version": "1.1",
+  "version": "1.2",
 
   "permissions": [
     "http://twitthat.com/",
