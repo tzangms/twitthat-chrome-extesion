@@ -1,4 +1,4 @@
-chrome.tabs.query({ highlighted : true }, function(tab) {
+chrome.tabs.query({ currentWindow:true, highlighted : true }, function(tab) {
     var url = tab[0].url;
     var title = tab[0].title;
 
