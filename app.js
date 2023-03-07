@@ -2,7 +2,7 @@ chrome.tabs.query({ currentWindow:true, highlighted : true }, function(tab) {
     var url = tab[0].url;
     var title = tab[0].title;
 
-    url = 'http://twitthat.com/go'
+    url = 'https://twitthat.com/go'
         + '?url=' + encodeURIComponent(url)
         + '&title=' + encodeURI(title)
         + '&is_extension=1';
