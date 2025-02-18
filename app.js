@@ -45,12 +45,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         // 設定分享按鈕事件
-        document.getElementById('share-button').addEventListener('click', function() {
+        const shareToTwitter = () => {
             const content = document.getElementById('share-content').value;
             const twitterShareUrl = 'https://twitter.com/intent/tweet'
                 + '?text=' + encodeURIComponent(content);
             
             window.open(twitterShareUrl, '_blank');
+        };
+
+        // 設定按鈕點擊事件
+        document.getElementById('share-button').addEventListener('click', shareToTwitter);
+
+        // 設定鍵盤快捷鍵
+        document.getElementById('share-content').addEventListener('keydown', function(e) {
+            // 檢查是否為 Command+Enter (Mac) 或 Ctrl+Enter (Windows/Linux)
+            if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') {
+                e.preventDefault(); // 防止換行
+                shareToTwitter();
+            }
         });
     });
 });
